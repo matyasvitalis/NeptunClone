@@ -47,11 +47,11 @@ namespace Neptun.Data
         {
            List<Student> student = new List<Student>()
             {
-                new Student() {id = textboxID,
-                firstName = firstName,
-                lastName = lastName,
-                age = Convert.ToInt32(age),
-                email = email,
+                new Student() {Id = textboxID,
+                FirstName = firstName,
+                LastName = lastName,
+                Age = Convert.ToInt32(age),
+                Email = email,
                 selectedSpecialisation = selectedSpecialisation}
                 };
             LoadingStudents.GetList(student);

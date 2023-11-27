@@ -47,6 +47,8 @@
             // 
             userPassword_InputBox.Location = new Point(266, 189);
             userPassword_InputBox.Name = "userPassword_InputBox";
+            userPassword_InputBox.MaxLength = 10;
+            userPassword_InputBox.PasswordChar = '*';
             userPassword_InputBox.Size = new Size(148, 23);
             userPassword_InputBox.TabIndex = 1;
             // 

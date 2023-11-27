@@ -10,6 +10,14 @@
 
   <ItemGroup>
     <Folder Include="Database\" />
+    <Folder Include="UI\NewFolder\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.OLE.Interop" Version="17.8.37221" />
+    <PackageReference Include="MSTest.TestFramework" Version="3.1.1" />
+    <PackageReference Include="xunit" Version="2.6.2" />
+    <PackageReference Include="xunit.core" Version="2.6.2" />
   </ItemGroup>
 
 </Project>
