@@ -25,9 +25,16 @@ namespace Neptun.Login
         private void LoginButton_Click(object sender, EventArgs e)
         {
             RegisterStudentForm f1 = new RegisterStudentForm();
-            this.Hide();
-            f1.ShowDialog();
-            this.Close();
+            if (userID_InputBox.Text == "" || userPassword_InputBox.Text == "")
+            {
+                MessageBox.Show("Hiányzó azonosító vagy jelszó!");
+            }
+            else
+            {
+                this.Hide();
+                f1.ShowDialog();
+                this.Close();
+            }
         }
     }
 }

@@ -8,11 +8,11 @@ namespace Neptun.Data
 {
     public class Student
     {
-        public string? id { get; set; }
-        public string? firstName { get; set; }
-        public string? lastName { get; set; }
-        public int age { get; set; }
-        public string? email { get; set; }
+        public string? Id { get; set; }
+        public string? FirstName { get; set; }
+        public string? LastName { get; set; }
+        public int Age { get; set; }
+        public string? Email { get; set; }
 
         public enum Specialisation
         {
@@ -26,21 +26,21 @@ namespace Neptun.Data
 
         public class AddingNewStudent
         {
-            public string id { get; set; }
-            public string firstName { get; set; }
-            public string lastName { get; set; }
-            public int age { get; set; }
-            public string email { get; set; }
+            public string Id { get; set; }
+            public string FirstName { get; set; }
+            public string LastName { get; set; }
+            public int Age { get; set; }
+            public string Email { get; set; }
             public Specialisation Specialisation { get; set; }
 
             // Student constructor
             public AddingNewStudent(string _id, string _firstName, string _lastName, int _age, string _email, Specialisation specialisation)
             {
-                id = _id;
-                firstName = _firstName;
-                lastName = _lastName;
-                age = _age;
-                email = _email;
+                Id = _id;
+                FirstName = _firstName;
+                LastName = _lastName;
+                Age = _age;
+                Email = _email;
                 Specialisation = specialisation;
 
             }

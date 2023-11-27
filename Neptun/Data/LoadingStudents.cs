@@ -25,11 +25,11 @@ namespace Neptun.Data
         {
             for (int i = 0; i < student.Count; i++)
             {
-                resultLabel.Text += "Student" + " data: " + "\n" + "ID: " + student[i].id + "\n"
-               + "First name: " + student[i].firstName + "\n"
-               + "Last name: " + student[i].lastName + "\n"
-               + "Age: " + student[i].age + "\n"
-               + "Email address: " + student[i].email + "\n"
+                resultLabel.Text += "Student" + " data: " + "\n" + "ID: " + student[i].Id + "\n"
+               + "First name: " + student[i].FirstName + "\n"
+               + "Last name: " + student[i].LastName + "\n"
+               + "Age: " + student[i].Age + "\n"
+               + "Email address: " + student[i].Email + "\n"
                + "Specialisation: " + student[i].selectedSpecialisation + "\n";
               /*  MessageBox.Show("Student" + " data: " + "\n" + "ID: " + student[i].id + "\n"
                + "First name: " + student[i].firstName + "\n"
