@@ -112,6 +112,7 @@
             AzonositoTextBox.Location = new Point(103, 68);
             AzonositoTextBox.Name = "AzonositoTextBox";
             AzonositoTextBox.Size = new Size(100, 23);
+            AzonositoTextBox.MaxLength = 6;
             AzonositoTextBox.TabIndex = 7;
             // 
             // label7
