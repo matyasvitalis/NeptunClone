@@ -110,9 +110,9 @@
             // AzonositoTextBox
             // 
             AzonositoTextBox.Location = new Point(103, 68);
+            AzonositoTextBox.MaxLength = 6;
             AzonositoTextBox.Name = "AzonositoTextBox";
             AzonositoTextBox.Size = new Size(100, 23);
-            AzonositoTextBox.MaxLength = 6;
             AzonositoTextBox.TabIndex = 7;
             // 
             // label7
@@ -172,7 +172,7 @@
             register_Button.UseVisualStyleBackColor = true;
             register_Button.Click += register_Button_Click;
             // 
-            // Form1
+            // RegisterStudentForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -192,8 +192,8 @@
             Controls.Add(label2);
             Controls.Add(TitleText);
             Controls.Add(label1);
-            Name = "Form1";
-            Text = "Form1";
+            Name = "RegisterStudentForm";
+            Text = "Diák regisztráció";
             ResumeLayout(false);
             PerformLayout();
         }

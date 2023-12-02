@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using NeptunClone.Database;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Policy;
@@ -7,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Neptun.Data
 {
-    internal class LoadingStudents
+    internal class LoadingStudentsDB
     {
         public static List<Student> student = new();
         public static Label resultLabel = new();
@@ -25,6 +27,29 @@ namespace Neptun.Data
         {
             for (int i = 0; i < student.Count; i++)
             {
+                DataBaseConnection.GetDataBase("userdata");
+                MySqlConnection connection = DataBaseConnection.Connection;
+                string CommandString;
+                CommandString = "INSERT INTO students(neptunID, firstName, lastName, age, emailAddress, specialisation) " +
+                    "VALUES(@neptunID, @firstName, @lastName, @age, @emailAddress, @specialisation)";
+                MySqlCommand command = new MySqlCommand(CommandString, connection);
+                command.Parameters.AddWithValue("@neptunID", student[i].Id);
+                command.Parameters.AddWithValue("@firstName", student[i].FirstName);
+                command.Parameters.AddWithValue("@lastName", student[i].LastName);
+                command.Parameters.AddWithValue("@age", student[i].Age);
+                command.Parameters.AddWithValue("@emailAddress", student[i].Email);
+                command.Parameters.AddWithValue("@specialisation", student[i].selectedSpecialisation);
+                try
+                {
+                    command.ExecuteNonQuery();
+                    MessageBox.Show("Sikeres felvitel az adatbázisba!");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                connection.Close();
+
                 resultLabel.Text += "Student" + " data: " + "\n" + "ID: " + student[i].Id + "\n"
                + "First name: " + student[i].FirstName + "\n"
                + "Last name: " + student[i].LastName + "\n"
