@@ -54,7 +54,7 @@ namespace Neptun.Data
                 Email = email,
                 selectedSpecialisation = selectedSpecialisation}
                 };
-            LoadingStudents.GetList(student);
+            LoadingStudentsDB.GetList(student);
         }
     }
 }

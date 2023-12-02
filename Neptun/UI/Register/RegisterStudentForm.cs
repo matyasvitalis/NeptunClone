@@ -23,8 +23,8 @@ namespace Neptun
             AddingStudents.Email(email_textBox.Text);
             AddingStudents.SelectedSpecialisation((string)szak_ListBox.SelectedItem);
             AddingStudents.AddStudent();
-            LoadingStudents.GetTextBox(label1);
-            LoadingStudents.LoadStudents();
+            LoadingStudentsDB.GetTextBox(label1);
+            LoadingStudentsDB.LoadStudents();
         }
 
         private void szak_ListBox_SelectedValueChanged(object sender, EventArgs e)
