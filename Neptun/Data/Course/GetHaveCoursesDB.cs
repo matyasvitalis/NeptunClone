@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace NeptunClone.Data.Course
 {
-    internal class GetHaveCoursesDB
+    public class GetHaveCoursesDB
     {
         private static string? timetableInfo;
         private static string? subjectName;
         private static int? numbersofTime;
         private static string? teacherInfo;
         private static Label haveCoursesLabel = new();
-        public static List<Course> haveCourses = new List<Course>();
+        static List<Course> haveCourses = new List<Course>();
 
         public static void GetTimeTableInfo(string text)
         {

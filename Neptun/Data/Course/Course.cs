@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace NeptunClone.Data.Course
 {
-    internal class Course
+    public class Course
     {
         public string? SubjectName {  get; set; }
         public int? NumbersOfTime { get; set; }

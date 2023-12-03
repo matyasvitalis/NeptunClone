@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace NeptunClone.Data.Timetable
 {
-    internal class TimeTableLoading
+    public class TimeTableLoading
     {
         private static string? userID;
         private static string? day;

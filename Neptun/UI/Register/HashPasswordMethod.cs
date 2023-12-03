@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace NeptunClone.UI.Register
 {
-    internal class HashPasswordMethod
+    public class HashPasswordMethod
     {
         static int keySize = 64;
         static int iterations = 350000;

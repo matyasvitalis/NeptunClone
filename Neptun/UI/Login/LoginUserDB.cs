@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace NeptunClone.UI.Login
 {
-    internal class LoginUserDB
+    public class LoginUserDB
     {
         private static string userID = "";
         private static string userPassword = "";
