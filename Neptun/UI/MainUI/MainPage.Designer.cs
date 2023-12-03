@@ -100,21 +100,21 @@
             // felvettTargyakToolStripMenuItem
             // 
             felvettTargyakToolStripMenuItem.Name = "felvettTargyakToolStripMenuItem";
-            felvettTargyakToolStripMenuItem.Size = new Size(180, 22);
+            felvettTargyakToolStripMenuItem.Size = new Size(159, 22);
             felvettTargyakToolStripMenuItem.Text = "Felvett tárgyak";
             felvettTargyakToolStripMenuItem.Click += felvettTárgyakToolStripMenuItem_Click;
             // 
             // felvettKurzusokToolStripMenuItem
             // 
             felvettKurzusokToolStripMenuItem.Name = "felvettKurzusokToolStripMenuItem";
-            felvettKurzusokToolStripMenuItem.Size = new Size(180, 22);
+            felvettKurzusokToolStripMenuItem.Size = new Size(159, 22);
             felvettKurzusokToolStripMenuItem.Text = "Felvett kurzusok";
             felvettKurzusokToolStripMenuItem.Click += felvettKurzusokToolStripMenuItem_Click;
             // 
             // tagyfelvetelToolStripMenuItem
             // 
             tagyfelvetelToolStripMenuItem.Name = "tagyfelvetelToolStripMenuItem";
-            tagyfelvetelToolStripMenuItem.Size = new Size(180, 22);
+            tagyfelvetelToolStripMenuItem.Size = new Size(159, 22);
             tagyfelvetelToolStripMenuItem.Text = "Tárgyfelvétel";
             tagyfelvetelToolStripMenuItem.Click += tárgyfelvételToolStripMenuItem_Click;
             // 
@@ -144,21 +144,22 @@
             // 
             // AddSubjectConfirmButton
             // 
-            AddSubjectConfirmButton.Location = new Point(55, 300);
+            AddSubjectConfirmButton.Location = new Point(69, 292);
             AddSubjectConfirmButton.Name = "AddSubjectConfirmButton";
-            AddSubjectConfirmButton.Size = new Size(75, 23);
+            AddSubjectConfirmButton.Size = new Size(175, 23);
             AddSubjectConfirmButton.TabIndex = 4;
             AddSubjectConfirmButton.Text = "AddSubjectConfirmButton";
             AddSubjectConfirmButton.UseVisualStyleBackColor = true;
             AddSubjectConfirmButton.Visible = false;
+            AddSubjectConfirmButton.Click += AddSubjectConfirmButton_Click;
             // 
             // Subjects_ItemBox
             // 
             Subjects_ItemBox.FormattingEnabled = true;
             Subjects_ItemBox.ItemHeight = 15;
-            Subjects_ItemBox.Location = new Point(46, 167);
+            Subjects_ItemBox.Location = new Point(40, 136);
             Subjects_ItemBox.Name = "Subjects_ItemBox";
-            Subjects_ItemBox.Size = new Size(120, 94);
+            Subjects_ItemBox.Size = new Size(277, 139);
             Subjects_ItemBox.TabIndex = 5;
             Subjects_ItemBox.Visible = false;
             // 
