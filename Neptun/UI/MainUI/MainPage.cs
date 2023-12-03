@@ -2,6 +2,7 @@
 using MySql.Data.MySqlClient;
 using Neptun.Login;
 using NeptunClone.Data.Course;
+using NeptunClone.Data.Student.SubjectAdding;
 using NeptunClone.Data.Subject;
 using NeptunClone.Data.Timetable;
 using NeptunClone.Database;
@@ -81,12 +82,16 @@ namespace NeptunClone.UI.MainUI
         private void tárgyfelvételToolStripMenuItem_Click(object sender, EventArgs e)
         {
             TargyFelvetelSelected = true;
-            MainTextLabel.Text = "tárgyfelvétel";
+            MainTextLabel.Text = "Tárgyfelvétel";
+            AddSubjectDB.GetNeptunID(neptunID);
+            AddSubjectDB.GetListBox(Subjects_ItemBox);
             if (TargyFelvetelSelected == true)
             {
                 Subjects_ItemBox.Visible = true;
                 AddSubjectConfirmButton.Visible = true;
-            } 
+                AddSubjectDB.FindSzakfromDB();
+                AddSubjectDB.LoadSubjectsfromDB();
+            }
         }
 
         private void felvettTárgyakToolStripMenuItem_Click(object sender, EventArgs e)
@@ -100,9 +105,12 @@ namespace NeptunClone.UI.MainUI
             HaveSubjectsLoading.getUserID(neptunID);
             GetHaveSubjectsDB.GetHaveSubjectsLabel(MainTextLabel);
             HaveSubjectsLoading.LoadHaveSubjectsDB();
-
         }
-
+        private void AddSubjectConfirmButton_Click(object sender, EventArgs e)
+        {
+            AddSubjectDB.GetSelectedSubject((string)Subjects_ItemBox.SelectedItem);
+            AddSubjectDB.AddSzaktoStudentTable();
+        }
         private void felvettKurzusokToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (TargyFelvetelSelected == true)
@@ -115,5 +123,6 @@ namespace NeptunClone.UI.MainUI
             GetHaveCoursesDB.GetHaveCoursesLabel(MainTextLabel);
             CourseLoading.LoadHaveCoursesDB();
         }
+
     }
 }
