@@ -147,34 +147,6 @@ jobs:
         draft: ${{ github.ref == 'refs/heads/'master && 'false' || 'true' }}
         prerelease: ${{ github.ref == 'refs/heads/'master && 'false' || 'true' }}
         target_commitish: ${{ github.sha }}
-    - name: Push packages to Octopus Deploy
-      uses: OctopusDeploy/push-package-action@v3
-      env:
-        OCTOPUS_API_KEY: ${{ secrets.OCTOPUS_API_TOKEN }}
-        OCTOPUS_URL: ${{ secrets.OCTOPUS_SERVER_URL }}
-        OCTOPUS_SPACE: ${{ secrets.OCTOPUS_SPACE }}
-      with:
-        packages: ${{ steps.package.outputs.artifacts }}
-        overwrite_mode: OverwriteExisting
-    - name: Generate Octopus Deploy build information
-      uses: OctopusDeploy/push-build-information-action@v3
-      env:
-        OCTOPUS_API_KEY: ${{ secrets.OCTOPUS_API_TOKEN }}
-        OCTOPUS_URL: ${{ secrets.OCTOPUS_SERVER_URL }}
-        OCTOPUS_SPACE: ${{ secrets.OCTOPUS_SPACE }}
-      with:
-        version: ${{ steps.determine_version.outputs.semVer }}
-        packages: NeptunClone
-        overwrite_mode: OverwriteExisting
-    - name: Create Octopus Release
-      uses: OctopusDeploy/create-release-action@v3
-      env:
-        OCTOPUS_API_KEY: ${{ secrets.OCTOPUS_API_TOKEN }}
-        OCTOPUS_URL: ${{ secrets.OCTOPUS_SERVER_URL }}
-        OCTOPUS_SPACE: ${{ secrets.OCTOPUS_SPACE }}
-      with:
-        project: NeptunClone
-        packages: ${{ steps.package.outputs.versions_new_line }}
 permissions:
   id-token: write
   checks: write
