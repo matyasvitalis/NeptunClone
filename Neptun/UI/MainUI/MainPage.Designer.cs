@@ -35,11 +35,14 @@
             toolStrip1 = new ToolStrip();
             toolStripSeparator1 = new ToolStripSeparator();
             targyakMenu = new ToolStripDropDownButton();
-            felvettTárgyakToolStripMenuItem = new ToolStripMenuItem();
+            felvettTargyakToolStripMenuItem = new ToolStripMenuItem();
             felvettKurzusokToolStripMenuItem = new ToolStripMenuItem();
-            tárgyfelvételToolStripMenuItem = new ToolStripMenuItem();
+            tagyfelvetelToolStripMenuItem = new ToolStripMenuItem();
             OrarendButton = new ToolStripButton();
             toolStripSeparator2 = new ToolStripSeparator();
+            MainTextLabel = new Label();
+            AddSubjectConfirmButton = new Button();
+            Subjects_ItemBox = new ListBox();
             statusStrip1.SuspendLayout();
             toolStrip1.SuspendLayout();
             SuspendLayout();
@@ -86,7 +89,7 @@
             // targyakMenu
             // 
             targyakMenu.DisplayStyle = ToolStripItemDisplayStyle.Text;
-            targyakMenu.DropDownItems.AddRange(new ToolStripItem[] { felvettTárgyakToolStripMenuItem, felvettKurzusokToolStripMenuItem, tárgyfelvételToolStripMenuItem });
+            targyakMenu.DropDownItems.AddRange(new ToolStripItem[] { felvettTargyakToolStripMenuItem, felvettKurzusokToolStripMenuItem, tagyfelvetelToolStripMenuItem });
             targyakMenu.Image = (Image)resources.GetObject("targyakMenu.Image");
             targyakMenu.ImageTransparentColor = Color.Magenta;
             targyakMenu.Name = "targyakMenu";
@@ -94,23 +97,26 @@
             targyakMenu.Text = "Tárgyak";
             targyakMenu.ToolTipText = "Tárgyak";
             // 
-            // felvettTárgyakToolStripMenuItem
+            // felvettTargyakToolStripMenuItem
             // 
-            felvettTárgyakToolStripMenuItem.Name = "felvettTárgyakToolStripMenuItem";
-            felvettTárgyakToolStripMenuItem.Size = new Size(180, 22);
-            felvettTárgyakToolStripMenuItem.Text = "Felvett tárgyak";
+            felvettTargyakToolStripMenuItem.Name = "felvettTargyakToolStripMenuItem";
+            felvettTargyakToolStripMenuItem.Size = new Size(180, 22);
+            felvettTargyakToolStripMenuItem.Text = "Felvett tárgyak";
+            felvettTargyakToolStripMenuItem.Click += felvettTárgyakToolStripMenuItem_Click;
             // 
             // felvettKurzusokToolStripMenuItem
             // 
             felvettKurzusokToolStripMenuItem.Name = "felvettKurzusokToolStripMenuItem";
             felvettKurzusokToolStripMenuItem.Size = new Size(180, 22);
             felvettKurzusokToolStripMenuItem.Text = "Felvett kurzusok";
+            felvettKurzusokToolStripMenuItem.Click += felvettKurzusokToolStripMenuItem_Click;
             // 
-            // tárgyfelvételToolStripMenuItem
+            // tagyfelvetelToolStripMenuItem
             // 
-            tárgyfelvételToolStripMenuItem.Name = "tárgyfelvételToolStripMenuItem";
-            tárgyfelvételToolStripMenuItem.Size = new Size(180, 22);
-            tárgyfelvételToolStripMenuItem.Text = "Tárgyfelvétel";
+            tagyfelvetelToolStripMenuItem.Name = "tagyfelvetelToolStripMenuItem";
+            tagyfelvetelToolStripMenuItem.Size = new Size(180, 22);
+            tagyfelvetelToolStripMenuItem.Text = "Tárgyfelvétel";
+            tagyfelvetelToolStripMenuItem.Click += tárgyfelvételToolStripMenuItem_Click;
             // 
             // OrarendButton
             // 
@@ -120,17 +126,50 @@
             OrarendButton.Name = "OrarendButton";
             OrarendButton.Size = new Size(54, 22);
             OrarendButton.Text = "Órarend";
+            OrarendButton.Click += OrarendButton_Click;
             // 
             // toolStripSeparator2
             // 
             toolStripSeparator2.Name = "toolStripSeparator2";
             toolStripSeparator2.Size = new Size(6, 25);
             // 
+            // MainTextLabel
+            // 
+            MainTextLabel.AutoSize = true;
+            MainTextLabel.Location = new Point(69, 97);
+            MainTextLabel.Name = "MainTextLabel";
+            MainTextLabel.Size = new Size(38, 15);
+            MainTextLabel.TabIndex = 3;
+            MainTextLabel.Text = "label1";
+            // 
+            // AddSubjectConfirmButton
+            // 
+            AddSubjectConfirmButton.Location = new Point(55, 300);
+            AddSubjectConfirmButton.Name = "AddSubjectConfirmButton";
+            AddSubjectConfirmButton.Size = new Size(75, 23);
+            AddSubjectConfirmButton.TabIndex = 4;
+            AddSubjectConfirmButton.Text = "AddSubjectConfirmButton";
+            AddSubjectConfirmButton.UseVisualStyleBackColor = true;
+            AddSubjectConfirmButton.Visible = false;
+            // 
+            // Subjects_ItemBox
+            // 
+            Subjects_ItemBox.FormattingEnabled = true;
+            Subjects_ItemBox.ItemHeight = 15;
+            Subjects_ItemBox.Location = new Point(46, 167);
+            Subjects_ItemBox.Name = "Subjects_ItemBox";
+            Subjects_ItemBox.Size = new Size(120, 94);
+            Subjects_ItemBox.TabIndex = 5;
+            Subjects_ItemBox.Visible = false;
+            // 
             // MainPage
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(Subjects_ItemBox);
+            Controls.Add(AddSubjectConfirmButton);
+            Controls.Add(MainTextLabel);
             Controls.Add(toolStrip1);
             Controls.Add(statusStrip1);
             Name = "MainPage";
@@ -152,10 +191,13 @@
         private ToolStripSeparator toolStripSeparator1;
         private ToolStripDropDownButton toolStripDropDownButton1;
         private ToolStripDropDownButton targyakMenu;
-        private ToolStripMenuItem felvettTárgyakToolStripMenuItem;
+        private ToolStripMenuItem felvettTargyakToolStripMenuItem;
         private ToolStripMenuItem felvettKurzusokToolStripMenuItem;
-        private ToolStripMenuItem tárgyfelvételToolStripMenuItem;
+        private ToolStripMenuItem tagyfelvetelToolStripMenuItem;
         private ToolStripButton OrarendButton;
         private ToolStripSeparator toolStripSeparator2;
+        private Label MainTextLabel;
+        private Button AddSubjectConfirmButton;
+        private ListBox Subjects_ItemBox;
     }
 }

@@ -7,7 +7,7 @@ using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Neptun.Data
+namespace NeptunClone.Data.Student
 {
     internal class LoadingStudentsDB
     {
@@ -56,12 +56,12 @@ namespace Neptun.Data
                + "Age: " + student[i].Age + "\n"
                + "Email address: " + student[i].Email + "\n"
                + "Specialisation: " + student[i].selectedSpecialisation + "\n";
-              /*  MessageBox.Show("Student" + " data: " + "\n" + "ID: " + student[i].id + "\n"
-               + "First name: " + student[i].firstName + "\n"
-               + "Last name: " + student[i].lastName + "\n"
-               + "Age: " + student[i].age + "\n"
-               + "Email address: " + student[i].email + "\n"
-               + "Specialisation: " + student[i].selectedSpecialisation + "\n"); */
+                /*  MessageBox.Show("Student" + " data: " + "\n" + "ID: " + student[i].id + "\n"
+                 + "First name: " + student[i].firstName + "\n"
+                 + "Last name: " + student[i].lastName + "\n"
+                 + "Age: " + student[i].age + "\n"
+                 + "Email address: " + student[i].email + "\n"
+                 + "Specialisation: " + student[i].selectedSpecialisation + "\n"); */
             }
         }
     }

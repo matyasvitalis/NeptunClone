@@ -6,7 +6,7 @@ using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Neptun.Data
+namespace NeptunClone.Data.Student
 {
     public class AddingStudents
     {
@@ -26,7 +26,7 @@ namespace Neptun.Data
         {
             firstName = text;
         }
-        public static void LastName(string text) 
+        public static void LastName(string text)
         {
             lastName = text;
         }
@@ -36,16 +36,16 @@ namespace Neptun.Data
         }
         public static void Email(string text)
         {
-           email = text;
+            email = text;
         }
         public static void SelectedSpecialisation(string text)
         {
-           selectedSpecialisation = text;
+            selectedSpecialisation = text;
         }
 
         public static void AddStudent()
         {
-           List<Student> student = new List<Student>()
+            List<Student> student = new List<Student>()
             {
                 new Student() {Id = textboxID,
                 FirstName = firstName,
