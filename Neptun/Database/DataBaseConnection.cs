@@ -8,12 +8,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Org.BouncyCastle.Bcpg;
+using EnvDTE;
 
 namespace NeptunClone.Database
 {   
     public class DataBaseConnection
     {
-        private static MySqlConnection? _connection;
+        public static MySqlConnection? _connection = new MySqlConnection();
         public static string? database; //userdata, students
 
         public static void GetDataBase(string text)

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace NeptunClone.Data.Course
 {
-    internal class CourseLoading
+    public class CourseLoading
     {
         private static string? userID;
         private static string? timetableInfo;

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace NeptunClone.Data.Subject
 {
-    internal class HaveSubjects
+    public class HaveSubjects
     {
         public string? specialisation { get; set; }
         public string? SubjectName { get; set; }

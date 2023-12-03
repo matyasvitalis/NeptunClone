@@ -8,12 +8,12 @@ using System.Xml;
 
 namespace NeptunClone.Data.Subject
 {
-    internal class GetHaveSubjectsDB
+    public class GetHaveSubjectsDB
     {
         private static string? specialisation;
         private static string? subjectName;
         private static Label haveSubjectsLabel = new();
-        public static List<HaveSubjects> haveSubjects = new List<HaveSubjects>();
+        static List<HaveSubjects> haveSubjects = new List<HaveSubjects>();
 
         public static void GetSpecialisation(string text)
         {

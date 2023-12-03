@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace NeptunClone.Data.Student
 {
-    internal class LoadingStudentsDB
+    public class LoadingStudentsDB
     {
         public static List<Student> student = new();
         public static Label resultLabel = new();

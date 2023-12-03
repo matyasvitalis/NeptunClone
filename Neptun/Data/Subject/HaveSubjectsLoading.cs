@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace NeptunClone.Data.Subject
 {
-    internal class HaveSubjectsLoading
+    public class HaveSubjectsLoading
     {
         private static string? userID;
         private static string? specialisation;
