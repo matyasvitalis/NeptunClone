@@ -26,16 +26,8 @@ namespace NeptunClone.Database
                 _connection = null;
                 if (_connection == null)
                 {
-                    if (database == "userdata")
-                    {
-                        string cs = @"server=127.0.0.1; user id=root; password=''; database=userdata";
+                        string cs = @"server=127.0.0.1; user id=root; password=''; database=" + database + "";
                         _connection = new MySqlConnection(cs);
-                    }
-                    else
-                    {
-                        string cs = @"server=127.0.0.1; user id=root; password=''; database=students";
-                        _connection = new MySqlConnection(cs);
-                    }
                 }
                 if (_connection.State == ConnectionState.Closed)
                     try

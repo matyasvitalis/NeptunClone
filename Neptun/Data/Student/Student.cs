@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Neptun.Data
+namespace NeptunClone.Data.Student
 {
     public class Student
     {
@@ -22,7 +22,7 @@ namespace Neptun.Data
             legijarmu_vezetes,
             magyar_info
         }
-        public string? selectedSpecialisation { get; set;  }
+        public string? selectedSpecialisation { get; set; }
 
         public class AddingNewStudent
         {

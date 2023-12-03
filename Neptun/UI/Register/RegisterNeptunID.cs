@@ -12,7 +12,7 @@ namespace NeptunClone.UI.Register
 {   
     public class RegisterNeptunID
     {
-        static string? textboxPassword;
+        static string textboxPassword = "";
         static string? textboxUsername;
 
         public static void TextBoxPassword(string text)

@@ -97,7 +97,7 @@ namespace Neptun.Login
         {
             if (linkLabel1.Text == "Regisztrálj!")
             {
-                LoginForm.ActiveForm.Text = "Regisztráció";
+                ActiveForm.Text = "Regisztráció";
                 LoginText.Text = "Regisztráció";
                 LoginButton.Text = "Regisztráció";
                 PasswordConfirmLabel.Visible = true;
@@ -107,7 +107,7 @@ namespace Neptun.Login
             }
             else
             {
-                LoginForm.ActiveForm.Text = "Bejelentkezés";
+                ActiveForm.Text = "Bejelentkezés";
                 LoginText.Text = "Bejelentkezés";
                 LoginButton.Text = "Bejelentkezés";
                 PasswordConfirmLabel.Visible = false;

@@ -1,4 +1,4 @@
-using Neptun.Data;
+using NeptunClone.Data.Student;
 
 namespace Neptun
 {
